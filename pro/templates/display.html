@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Services{% endblock title %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Description</th>
+            <th>Modified_date</th>
+        </tr>
+        {% for student in student_number %}
+        <tr>
+          <td>{{ student.name}}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.phone }}</td>
+          <td>{{ student.desc }}</td>
+          <td>{{ student.date }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+  </body>
+</html>
+
+{% endblock body %}
